@@ -114,7 +114,7 @@ export default {
         store.commit("setToken", "123231fadfs")
         setTimeout(() => {
           router.push({
-            name: "userList",
+            name: store.state.permission.leftMunuList[1].name,
           });
         });
       });

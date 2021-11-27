@@ -27,7 +27,14 @@ export default defineConfig({
     }),
   ],
   server: {
-    open: true
+    open: true,
+    proxy: {
+      '^/list': {
+        target: 'https://dev-gateway.iuctrip.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/list/, '')
+      }
+    }
   },
   resolve: {
     alias: {

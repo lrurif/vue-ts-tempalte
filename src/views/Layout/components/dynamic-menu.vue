@@ -15,7 +15,7 @@
         </template>
         <dynamic-menu :menuData="item.children"></dynamic-menu>
       </el-sub-menu>
-      <el-menu-item :key="item.name" :data-a="item.name" v-else :index="item.name" @click="gotoRoute(item)">
+      <el-menu-item :key="item.name"  v-else :index="item.name" @click="gotoRoute(item)">
         <el-icon><Location /></el-icon>
         <span>{{ item.meta.name }}</span>
       </el-menu-item>
