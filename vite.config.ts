@@ -1,8 +1,11 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-
+import { resolve } from 'path'
 import styleImport from "vite-plugin-style-import";
 import ViteComponents, { ElementPlusResolver } from "vite-plugin-components";
+const pathResolve = (dir: string): any => {
+  return resolve(__dirname, ".", dir)
+}
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -23,4 +26,12 @@ export default defineConfig({
       ],
     }),
   ],
+  server: {
+    open: true
+  },
+  resolve: {
+    alias: {
+      '@': pathResolve("src")
+    }
+  }
 });

@@ -1,5 +1,4 @@
 <template>
-empty
   <router-view></router-view>
 </template>
 

@@ -99,7 +99,6 @@ export default {
     const route = useRoute();
     const store = useStore();
     let { proxy } = getCurrentInstance();
-    console.log(proxy.$store, "proxy");
     let data: any = reactive({
       API_HOST_INGBASEURL: proxy.$root.API_HOST_INGBASEURL,
       formData: {
@@ -111,10 +110,8 @@ export default {
     });
     const login = () => {
       store.dispatch("setPermissionList", [1, 101, 102]).then(() => {
-        // router.push({
-        //   name: 'userList'
-        // })
-        // console.log("执行了");
+        sessionStorage.token = "123231fadfs"
+        store.commit("setToken", "123231fadfs")
         setTimeout(() => {
           router.push({
             name: "userList",
@@ -207,17 +204,14 @@ export default {
 }
 
 .login-right {
-  /*   margin-top:122px;
-    margin-right:86px;
-    border:1px solid #ECE9E9;
-    background:#fff;*/
-  /* margin-top: 10vh;
-    padding-top: 60px;
-    padding-right: 86px; */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .login-right-btn {

@@ -3,7 +3,7 @@ import login from "../views/login/index.vue"
 // const NotFound = resolve => require(['pages/errorPage/404'], resolve);
 // const Forbidden = resolve => require(['pages/errorPage/403'], resolve);
 import empty from "../views/empty/index.vue"
-import Layout from "../views/layout/index.vue"
+import Layout from "../views/Layout/index.vue"
 export default createRouter({
   history: createWebHashHistory(),
   routes: [

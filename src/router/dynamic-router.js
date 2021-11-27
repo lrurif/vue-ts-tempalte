@@ -35,6 +35,9 @@ const Routes = [
       {
         path: 'userList',
         name: 'userList',
+        meta: {
+          name: '用户列表'
+        },
         component: () => import("../views/userManagement/userList/index.vue")
       },
       {
@@ -42,10 +45,53 @@ const Routes = [
         name: 'addOrEditUser',
         meta: {
           imgId: '2',
-          name: '新增/编辑用户'
+          name: '新增/编辑用户',
         },
         component: () => import("../views/userManagement/addOrEditUser/index.vue")
       },
+    ]
+  },
+  {
+    path: 'orderManagement',
+    name: 'orderManagement',
+    meta: {
+      name: '订单管理',
+      permission: 1
+    },
+    component: empty,
+    children: [
+      {
+        path: 'refundOrderManagement',
+        name: 'refundOrderManagement',
+        meta: {
+          name: '退款订单',
+          permission: 1
+        },
+        component: empty,
+        children: [
+          {
+            path: 'refundOrderList',
+            name: 'refundOrderList',
+            component: () => import("@/views/orderManagement/refundOrderManagement/refundOrderList.vue"),
+          }
+        ]
+      },
+      {
+        path: 'shipOrderManagement',
+        name: 'shipOrderManagement',
+        meta: {
+          name: '包船订单',
+          permission: 1
+        },
+        component: empty,
+        children: [
+          {
+            path: 'shipOrderList',
+            name: 'shipOrderList',
+            component: () => import("@/views/orderManagement/shipOrderManagement/shipOrderList.vue"),
+          }
+        ]
+      }
     ]
   }
 ]
