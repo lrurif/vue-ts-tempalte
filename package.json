@@ -2,10 +2,10 @@
   "name": "vue-ts-template-2",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --open",
-    "build": "vue-tsc --noEmit && vite build",
-    "build:dev": "vue-tsc --noEmit && vite build --mode dev",
-    "build:fat": "vue-tsc --noEmit && vite build --mode fat",
+    "dev": "vite",
+    "build": "vite build",
+    "build:dev": "vite build --mode dev",
+    "build:fat": "vite build --mode fat",
     "build:prod": "vite build --mode production",
     "serve": "vite preview"
   },
@@ -16,6 +16,7 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@types/node": "^16.11.10",
     "@vitejs/plugin-vue": "^1.9.3",
     "element-plus": "^1.2.0-beta.3",
     "sass": "^1.43.5",
