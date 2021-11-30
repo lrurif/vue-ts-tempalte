@@ -5,7 +5,7 @@ import store from "@/store/index"
 import Api from "@/api/index"
 import "@/assets/css/index.css"
 const app = createApp(App)
-app.use(store);
 app.config.globalProperties.$Api = Api;
+app.use(store);
 app.use(router);
 app.mount('#app')

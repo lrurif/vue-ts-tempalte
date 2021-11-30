@@ -1,4 +1,4 @@
-// 装饰者模式
+// 装饰者模式，可用于数据埋点，不会影响原函数，以及原函数this指向
 Function.prototype.before = function(fn) {
   const _this = this;
   return function(...args) {
@@ -14,3 +14,4 @@ Function.prototype.after = function(fn) {
     return res;
   }
 }
+

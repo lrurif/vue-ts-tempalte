@@ -11,7 +11,7 @@ export const handleUrl =  (actionName:string) => {
 * @param {Array} getArr get请求路径数组
 * @returns {Function[]} 数组请求函数
 */
-export const handleRequestFunc = (urlArr: Array<string>, getArr:Array<string>) => {
+export const handleRequestFunc = (urlArr: string[], getArr:Array<string>) => {
  const requestMap:any = {};
  Object.keys(urlArr).map(item => {
      requestMap[item.replace(/Url$/, "Api")]= (params:any) => {

@@ -1,5 +1,5 @@
-import api from './api';
-import {handleRequestFunc} from "../../utils"
+import api from "./api";
+import { handleRequestFunc } from "../../utils";
 
-const getUrlArr = []
+const getUrlArr = [];
 export default handleRequestFunc(api, getUrlArr);

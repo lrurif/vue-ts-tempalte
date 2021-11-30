@@ -1,8 +1,8 @@
 import axios from "axios";
-import store from "@/store/index.ts"
+import store from "@/store"
 // import { Message } from "element-puls";
 let cancel;
-let whiteUrlList = []
+let whiteUrlList:Array<string> = []
 const service = axios.create({
   timeout: 1000 * 30,
   withCredentials: true,

@@ -32,7 +32,7 @@ export default ({ mode }) => {
       host: '0.0.0.0',
       port: 8090,
       proxy: {
-        "^/list": {
+        "/list": {
           target: "https://dev-gateway.iuctrip.com",
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/list/, ""),
