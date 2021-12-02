@@ -109,6 +109,7 @@ export default {
       loading: false,
     });
     const login = () => {
+      sessionStorage.setItem("token", "fasdfjklsljf")
       store.commit("setToken", "123231fadfs");
       store.dispatch("setPermissionList", [1, 101, 102]).then(() => {
         console.log("执行到了");

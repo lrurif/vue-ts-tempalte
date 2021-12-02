@@ -4,6 +4,7 @@ const routesWhiteList = ["login"];
 router.beforeEach((to: any, from, next) => {
   console.log(store.state.permission.menuList, 'menuList');
   // debugger;
+  console.log(sessionStorage.getItem("token"), 'token');
   if (routesWhiteList.includes(to.name)) {
     next();
   } else if (!sessionStorage.token) {
