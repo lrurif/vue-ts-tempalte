@@ -109,14 +109,17 @@ export default {
       loading: false,
     });
     const login = () => {
+      store.commit("setToken", "123231fadfs");
       store.dispatch("setPermissionList", [1, 101, 102]).then(() => {
-        sessionStorage.token = "123231fadfs"
-        store.commit("setToken", "123231fadfs")
+        console.log("执行到了");
         setTimeout(() => {
           router.push({
             name: store.state.permission.leftMunuList[1].name,
           });
         });
+      }, err => {
+        debugger;
+        console.log(err);
       });
     };
     return {

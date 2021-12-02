@@ -1,8 +1,12 @@
 <script lang="ts">
 import { reactive, toRefs, onMounted, nextTick } from "vue";
 import { useStore } from "vuex";
+import axios from "axios"
 export default {
   setup() {
+    axios.get("/api/user").then(res => {
+      console.log(res);
+    })
     const store = useStore();
     // 在页面加载时读取sessionStorage
     // if (sessionStorage.getItem("store")) {

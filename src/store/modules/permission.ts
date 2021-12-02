@@ -86,7 +86,6 @@ const actions = {
       });
     }
     setDefaultRoute([MainContainer]);
-    console.log(MainContainer);
     DynamicRoutes.map((item) => {
       router.addRoute(item);
     });
