@@ -57,7 +57,7 @@
             >
           </p>
           <el-form-item>
-            <button class="btn" :disabled="loading" @click="login">
+            <button class="btn" :disabled="loading" @click.prevent="login">
               {{ loading ? "登录中..." : "登录" }}
             </button>
           </el-form-item>
