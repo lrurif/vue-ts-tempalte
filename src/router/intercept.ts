@@ -16,6 +16,7 @@ router.beforeEach((to: any, from, next) => {
         next({ ...to });
     });
   } else if (to.name != "login") {
+    console.log("not login");
     next();
   }
 });
