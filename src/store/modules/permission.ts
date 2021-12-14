@@ -102,6 +102,13 @@ const actions = {
       })
     } */
   },
+  LOGIN_OUT({ commit, state, dispatch }:any) {
+    sessionStorage.clear();
+      setTimeout(() => {
+        router.push("/login");
+        window.location.reload();
+      }, 1000);
+  }
 };
 const getters = {
   menuList: (state: any) => state.menuList,

@@ -61,11 +61,7 @@ export default {
       () => store.state.permission.isSidebarNavCollapse
     );
     const loginOut = () => {
-      sessionStorage.clear();
-      setTimeout(() => {
-        router.push("/login");
-        window.location.reload();
-      }, 1000);
+      store.dispatch("LOGIN_OUT")
     };
     return {
       leftMunuList,

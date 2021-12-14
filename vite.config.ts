@@ -21,7 +21,7 @@ export default ({ mode }) => {
             libraryName: "element-plus",
             esModule: true,
             resolveStyle: (name) => {
-              return `element-plus/lib/theme-chalk/${name}.css`;
+              return `element-plus/theme-chalk/${name}.css`;
             },
           },
         ],
@@ -33,7 +33,7 @@ export default ({ mode }) => {
       port: 8090,
       proxy: {
         "/list": {
-          target: "https://dev-gateway.iuctrip.com",
+          target: "http://localhost:3000",
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/list/, ""),
         },

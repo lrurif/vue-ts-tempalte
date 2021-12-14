@@ -4,22 +4,10 @@ import { useStore } from "vuex";
 import axios from "axios"
 export default {
   setup() {
+    axios.get("/list")
     axios.get("/api/user").then(res => {
       console.log(res);
     })
-    const store = useStore();
-    // 在页面加载时读取sessionStorage
-    // if (sessionStorage.getItem("store")) {
-    //   store.replaceState(
-    //     Object.assign(
-    //       {},
-    //       store.state,
-    //       JSON.parse(sessionStorage.getItem("store"))
-    //     )
-    //   );
-    //   sessionStorage.removeItem("store");
-    // }
-
     let data: any = reactive({
       API_HOST_INGBASEURL: "",
     });
